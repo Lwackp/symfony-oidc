@@ -212,7 +212,7 @@ class OidcClient implements OidcClientInterface
 
     // Check data due
     if (!is_array($data)) {
-      throw new OidcException('Error retrieving the user info from the endpoint.');
+      throw new OidcException("Error retrieving the user info from the endpoint: $jsonData");
     }
 
     return new OidcUserData($data);
